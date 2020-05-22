@@ -3,7 +3,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-	<bean id="empPojo" class="EmployeePojo">
+	<bean id="empPojo" class="com.sapient.Week7.springintro.EmployeePojo">
+	<property name="id" value="1"></property>
+	<property name="name" value="Rohan Dutt"></property>
+	<property name="city" value="Chandigarh"></property>
 	</bean>
-
+    <bean id="empMap" class="com.sapient.Week7.springintro.EmployeeMAp">
+     
+    </bean>
 </beans>

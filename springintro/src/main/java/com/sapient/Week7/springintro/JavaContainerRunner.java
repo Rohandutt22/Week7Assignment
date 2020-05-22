@@ -1,17 +1,18 @@
 package com.sapient.Week7.springintro;
 
-
-import java.util.Map;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-public class XmlContainerRunner {
+import org.springframework.core.io.ClassPathResource;
+
+public class JavaContainerRunner {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"spbean.xml");
+		
+		ApplicationContext context =  new AnnotationConfigApplicationContext(MyJavaContainer.class);
   EmployeePojo emp=(EmployeePojo) context.getBean(EmployeePojo.class);
   System.out.println(emp);
   EmployeeMAp m=(EmployeeMAp)context.getBean(EmployeeMAp.class);
